@@ -1,33 +1,36 @@
-Sure! Here's a polished and well-decorated version of your `README.md` file for the **Data-Mining-Proj** project, styled in proper Markdown with headings, code blocks, and tips:
+# 📊 Data-Mining-Proj
+
+A Java-based data mining application powered by **Weka** and **Maven**, with an optional Swing-based GUI — designed and built in **Visual Studio Code**.
 
 ---
 
-# 📊 Data-Mining-Proj
+## 📚 Table of Content
 
-A Java project for data mining using **Weka** and **Maven**, built with **Visual Studio Code**.
+- [🧰 Prerequisites](#-prerequisites)
+- [⚙️ Project Setup](#️-project-setup)
+- [🚀 Running the Project](#-running-the-project)
+- [🛠️ Troubleshooting](#️-troubleshooting)
+- [📂 Project Structure](#-project-structure)
+- [📦 Project Structure Overview](#-project-structure-overview)
+- [✅ You're All Set!](#-youre-all-set)
 
 ---
 
 ## 🧰 Prerequisites
 
-Make sure you have the following installed:
+Make sure the following tools and extensions are installed on your system:
 
 - **Java JDK 8+**  
-  Check with:
-
   ```bash
   java -version
   ```
 
 - **Apache Maven**  
-  Check with:
-
   ```bash
   mvn --version
   ```
 
-- **VS Code Extensions**  
-  Install:
+- **Visual Studio Code Extensions**  
   - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
   - [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
 
@@ -35,56 +38,86 @@ Make sure you have the following installed:
 
 ## ⚙️ Project Setup
 
-1. **Open the project folder** in Visual Studio Code.
+1. **Open the project folder** in VS Code.
 
-2. **Verify the Weka dependency** inside `pom.xml`:
-
+2. **Verify Weka dependency** in `pom.xml`:
    ```xml
    <dependency>
-        <groupId>nz.ac.waikato.cms.weka</groupId>
-        <artifactId>weka-stable</artifactId>
-        <version>3.8.6</version>
-    </dependency>
+     <groupId>nz.ac.waikato.cms.weka</groupId>
+     <artifactId>weka-stable</artifactId>
+     <version>3.8.6</version>
+   </dependency>
    ```
 
-3. **Sync the project** by running:
+3. **Install dependencies** by running:
    ```bash
    mvn clean install
    ```
 
 ---
 
-Got it! Here's the updated **"🚀 Running the Project"** section with your instructions integrated clearly and professionally:
-
----
-
 ## 🚀 Running the Project
 
-1. **Save the project** after opening it in VS Code:  
-   Press `Ctrl + S` — this will automatically trigger dependency installation if you have the **Java Extension Pack** and **Maven for Java** installed.
+1. **Save the project**  
+   Press `Ctrl + S` in VS Code — this triggers auto-build and downloads all required dependencies (with Java + Maven extensions installed).
 
-2. **Run the GUI**:  
-   In the **Project Explorer**, right-click on your main class file (e.g., `MainFrame.java`) and select:
+2. **Run the application**  
+   Right-click on your main class (e.g., `MainFrame.java`) in the **Project Explorer** and select:
 
    ```
    Run Java
    ```
 
-   > 🔁 Replace `MainFrame.java` with your actual main class file if it's different.
+   > 🔁 Replace `MainFrame.java` with your actual entry class if different.
 
 ---
 
 ## 🛠️ Troubleshooting
 
 - **JAVA_HOME Not Set?**  
-  Make sure your `JAVA_HOME` environment variable points to your JDK installation.
+  Make sure the `JAVA_HOME` environment variable points to your JDK installation.
+
+- **Dependency issues?**  
+  Use the command:
+  ```bash
+  mvn dependency:tree
+  ```
 
 ---
 
-## ✅ You're All Set!
+## 📂 Project Structure
 
-Enjoy analyzing your data with the custom-built GUI powered by Weka and Java! 🎉
+```
+project-root/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/
+│   │   │       ├── data/            # Data handling module
+│   │   │       ├── algorithms/      # Algorithm modules
+│   │   │       ├── controller/      # Controls flow
+│   │   │       ├── gui/             # GUI (optional)
+│   │   │       └── utils/           # Helpers
+│   │   └── resources/               # Static data
+│   └── test/
+│       └── java/com/example/tests/  # JUnit Tests
+│
+├── pom.xml
+└── README.md
+```
 
 ---
 
-Let me know if you'd like to add badges, license info, or contribute sections!
+## 📦 Project Structure Overview
+
+| **Module**            | **Folder**     | **Purpose**                                                                 | **Key Classes/Files**                                  | **Notes**                                                                 |
+|-----------------------|----------------|------------------------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------|
+| **Data Handling**     | `data/`         | Load and manage datasets                                                    | `DataLoader.java`                                      | Loads datasets (e.g., ARFF), stores as Weka `Instances`                   |
+| **Algorithms**        | `algorithms/`   | Encapsulate individual algorithms                                           | `Algorithm.java`, `J48Algorithm.java`, `KMeansAlgorithm.java` | Implements common interface for flexibility                               |
+| **Controller**        | `controller/`   | Manage data and algorithm flow                                              | `AnalysisController.java`                              | Handles data loading and algorithm execution                              |
+| **GUI (Optional)**    | `gui/`          | User interface for dataset and algorithm interaction                        | `MainFrame.java`                                       | Built with Swing, includes file chooser, dropdowns, and results display   |
+| **Utilities**         | `utils/`        | Reusable helper functions and tools                                         | Logging, validation utilities                          | Shared logic across modules                                               |
+| **Testing**           | `tests/`        | Validate functionality and correctness                                     | `AlgorithmTests.java`, integration tests               | Use **JUnit** or **TestNG** for testing                                   |
+
+---
