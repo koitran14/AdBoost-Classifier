@@ -99,7 +99,8 @@ project-root/
 │   │   │       ├── controller/      # Controls flow
 │   │   │       ├── gui/             # GUI (optional)
 │   │   │       └── utils/           # Helpers
-│   │   └── resources/               # Static data
+│   │   │       └── evaluation/      # Evaluation
+│   │   └── resources/               # Static data (dataset csv, arff...)
 │   └── test/
 │       └── java/com/example/tests/  # JUnit Tests
 │
@@ -114,10 +115,10 @@ project-root/
 | **Module**            | **Folder**     | **Purpose**                                                                 | **Key Classes/Files**                                  | **Notes**                                                                 |
 |-----------------------|----------------|------------------------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------|
 | **Data Handling**     | `data/`         | Load and manage datasets                                                    | `DataLoader.java`                                      | Loads datasets (e.g., ARFF), stores as Weka `Instances`                   |
-| **Algorithms**        | `algorithms/`   | Encapsulate individual algorithms                                           | `Algorithm.java`, `J48Algorithm.java`, `KMeansAlgorithm.java` | Implements common interface for flexibility                               |
+| **Algorithms**        | `algorithms/`   | Encapsulate individual algorithms                                           | `Algorithm.java`, `J48Classifier.java`, `NaiveBayes.java` | Implements common interface for flexibility                               |
 | **Controller**        | `controller/`   | Manage data and algorithm flow                                              | `AnalysisController.java`                              | Handles data loading and algorithm execution                              |
 | **GUI (Optional)**    | `gui/`          | User interface for dataset and algorithm interaction                        | `MainFrame.java`                                       | Built with Swing, includes file chooser, dropdowns, and results display   |
 | **Utilities**         | `utils/`        | Reusable helper functions and tools                                         | Logging, validation utilities                          | Shared logic across modules                                               |
 | **Testing**           | `tests/`        | Validate functionality and correctness                                     | `AlgorithmTests.java`, integration tests               | Use **JUnit** or **TestNG** for testing                                   |
-
+| **Evaluation**           | `evaluation/`        | evaluate selected classifier with given dataset and visualize its result.                                    | `ModelEvaluator.java`, integration tests               | for testing                                   |
 ---
