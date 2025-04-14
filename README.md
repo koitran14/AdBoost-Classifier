@@ -120,5 +120,5 @@ project-root/
 | **GUI (Optional)**    | `gui/`          | User interface for dataset and algorithm interaction                        | `MainFrame.java`                                       | Built with Swing, includes file chooser, dropdowns, and results display   |
 | **Utilities**         | `utils/`        | Reusable helper functions and tools                                         | Logging, validation utilities                          | Shared logic across modules                                               |
 | **Testing**           | `tests/`        | Validate functionality and correctness                                     | `AlgorithmTests.java`, integration tests               | Use **JUnit** or **TestNG** for testing                                   |
-| **Evaluation**           | `evaluation/`        | evaluate selected classifier with given dataset and visualize its result.                                    | `ModelEvaluator.java`, integration tests               | including Accuracy, F1-score, Recall,...                             |
+| **Evaluation**           | `evaluation/`        | evaluate selected classifier with given dataset and visualize its result.                                    | `ModelEvaluator.java`              | including Accuracy, F1-score, Recall,...                             |
 ---
