@@ -1,32 +1,33 @@
 package com.example.algorithms;
 
 import weka.classifiers.Classifier;
-import weka.classifiers.bayes.NaiveBayes;
+import weka.classifiers.trees.RandomForest;
 import weka.core.Instances;
 
-public class NaiveBayesClassifier implements Algorithm {
-    private NaiveBayes naiveBayes;
+public class RandomForestClassifier implements Algorithm {
+    private RandomForest randomForest;
 
     @Override
     public void train(Instances data) throws Exception {
-        naiveBayes = new NaiveBayes();
+        randomForest = new RandomForest();
         Instances filteredData = applyFeatureSelection(data);
-        naiveBayes.buildClassifier(filteredData);
+        randomForest.buildClassifier(filteredData);
     }
 
     @Override
     public String getResults() {
-        return naiveBayes.toString();
+        return randomForest.toString();
     }
 
     @Override
     public Classifier getClassifier() {
-        return naiveBayes;
+        return randomForest;
     }
 
     @Override
     public Instances applyFeatureSelection(Instances data) throws Exception {
-        //Implement applyFeatureSelection logic if needed
+        //TODO: Implement feature selection logic if needed
+        
         return data; 
     }
 }

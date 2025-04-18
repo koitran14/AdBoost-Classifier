@@ -16,8 +16,9 @@ public class MiningController {
     private final ModelEvaluator evaluator = new ModelEvaluator();
 
     public void runPipeline(String rawPath, String arffPath, String reportPath) throws Exception {
-        // Step 1: Preprocessing
-        Instances data = loader.loadCSVDataset(rawPath, arffPath);
+        // Step 1: Load Dataset
+        // Instances data = loader.loadCSVDataset(rawPath, arffPath);
+        Instances data = loader.loadDataset(rawPath);
         data = cleaner.cleanData(data);
         analyzer.analyzeData(data);
 

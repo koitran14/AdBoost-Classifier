@@ -1,0 +1,140 @@
+Model: J48Classifier
+Accuracy: 50.0%
+Precision: 0.5208333333333333
+Recall: 0.5
+F1-Score: 0.5080213903743315
+Runtime: 0.0859883 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 4 | a = yes
+ 3 2 | b = no
+
+
+Model: NaiveBayesClassifier
+Accuracy: 57.142857142857146%
+Precision: 0.5281385281385281
+Recall: 0.5714285714285714
+F1-Score: 0.5392857142857144
+Runtime: 0.0361553 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 2 | a = yes
+ 4 1 | b = no
+
+
+Model: J48Classifier
+Accuracy: 50.0%
+Precision: 0.5208333333333333
+Recall: 0.5
+F1-Score: 0.5080213903743315
+Runtime: 0.0710405 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 4 | a = yes
+ 3 2 | b = no
+
+
+Model: NaiveBayesClassifier
+Accuracy: 57.142857142857146%
+Precision: 0.5281385281385281
+Recall: 0.5714285714285714
+F1-Score: 0.5392857142857144
+Runtime: 0.0275137 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 2 | a = yes
+ 4 1 | b = no
+
+
+Model: J48Classifier
+Accuracy: 50.0%
+Precision: 0.5208333333333333
+Recall: 0.5
+F1-Score: 0.5080213903743315
+Runtime: 0.0695552 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 4 | a = yes
+ 3 2 | b = no
+
+
+Model: NaiveBayesClassifier
+Accuracy: 57.142857142857146%
+Precision: 0.5281385281385281
+Recall: 0.5714285714285714
+F1-Score: 0.5392857142857144
+Runtime: 0.030054 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 2 | a = yes
+ 4 1 | b = no
+
+
+Model: J48Classifier
+Accuracy: 50.0%
+Precision: 0.5208333333333333
+Recall: 0.5
+F1-Score: 0.5080213903743315
+Runtime: 0.1759048 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 4 | a = yes
+ 3 2 | b = no
+
+
+Model: NaiveBayesClassifier
+Accuracy: 57.142857142857146%
+Precision: 0.5281385281385281
+Recall: 0.5714285714285714
+F1-Score: 0.5392857142857144
+Runtime: 0.0439281 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 2 | a = yes
+ 4 1 | b = no
+
+
+Model: J48Classifier
+Accuracy: 50.0%
+Precision: 0.5208333333333333
+Recall: 0.5
+F1-Score: 0.5080213903743315
+Runtime: 0.0994223 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 5 4 | a = yes
+ 3 2 | b = no
+
+
+Model: NaiveBayesClassifier
+Accuracy: 57.142857142857146%
+Precision: 0.5281385281385281
+Recall: 0.5714285714285714
+F1-Score: 0.5392857142857144
+Runtime: 0.0267581 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+ a b   <-- classified as
+ 7 2 | a = yes
+ 4 1 | b = no
+
+

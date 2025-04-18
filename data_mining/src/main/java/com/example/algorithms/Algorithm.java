@@ -10,4 +10,6 @@ public interface Algorithm {
     String getResults();
 
     Classifier getClassifier();
+
+    Instances applyFeatureSelection(Instances data) throws Exception;
 }
