@@ -25,7 +25,8 @@ public class DataLoader {
         CSVLoader loader = new CSVLoader();
         loader.setSource(new File(csvPath));
         Instances data = loader.getDataSet();
-        data.setClassIndex(data.numAttributes() - 1); // Set the last attribute as the class
+        int idx = data.attribute("uses_ad_boosts").index();
+        data.setClassIndex(idx); // Set "uses_ad_boosts" as the class
         
         // Save to ARFF file
         ArffSaver saver = new ArffSaver();

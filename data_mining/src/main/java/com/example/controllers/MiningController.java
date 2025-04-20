@@ -2,6 +2,7 @@ package com.example.controllers;
 
 import com.example.algorithms.J48Classifier;
 import com.example.algorithms.NaiveBayesClassifier;
+import com.example.algorithms.RandomForestClassifier;
 import com.example.data.DataAnalyzer;
 import com.example.data.DataCleaner;
 import com.example.data.DataLoader;
@@ -29,5 +30,9 @@ public class MiningController {
         // Step 3: Naive Bayes Classifier
         NaiveBayesClassifier nb = new NaiveBayesClassifier();
         evaluator.evaluateModel(nb, data, reportPath);
+
+        //Step 4: Random Forest 
+        RandomForestClassifier rf = new RandomForestClassifier();
+        evaluator.evaluateModel(rf, data, reportPath);
     }
 }
