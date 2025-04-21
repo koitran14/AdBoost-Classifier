@@ -180,3 +180,45 @@ Confusion Matrix:
  335 336 |   b = 1
 
 
+Model: J48Classifier
+Accuracy: 56.40025990903184%
+Precision: NaN
+Recall: 0.5640025990903184
+F1-Score: NaN
+Runtime: 0.5947596 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 868   0 |   a = 0
+ 671   0 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.2681414 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 5.7941763 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+
