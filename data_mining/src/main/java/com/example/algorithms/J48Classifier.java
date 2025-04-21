@@ -32,6 +32,7 @@ public class J48Classifier implements Algorithm {
         AttributeSelection filter = new AttributeSelection();
         CfsSubsetEval eval = new CfsSubsetEval();
         BestFirst search = new BestFirst();
+
         filter.setEvaluator(eval);
         filter.setSearch(search);
         filter.setInputFormat(data);

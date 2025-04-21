@@ -7,6 +7,9 @@ import weka.core.Instances;
 import weka.core.converters.ArffLoader;
 import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
+import weka.filters.Filter;
+import weka.filters.unsupervised.attribute.NumericToNominal;
+
 
 public class DataLoader {
     public Instances loadDataset(String filePath) throws Exception {
@@ -17,7 +20,16 @@ public class DataLoader {
         }
         loader.setFile(new File(filePath));
         Instances data = loader.getDataSet();
-        data.setClassIndex(data.numAttributes() - 1); // Set class attribute if needed
+        
+        int idx = data.attribute("uses_ad_boosts").index();
+        data.setClassIndex(idx); 
+
+        if (data.classAttribute().isNumeric()) {
+            NumericToNominal filter = new NumericToNominal();
+            filter.setInputFormat(data);
+            filter.setAttributeIndices("" + (data.classIndex() + 1));
+            data = Filter.useFilter(data, filter);
+        }
         return data;
     }
 
