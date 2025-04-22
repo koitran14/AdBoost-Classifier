@@ -25,14 +25,14 @@ public class MiningController {
 
         // Step 2: J48 Classifier
         J48Classifier j48 = new J48Classifier();
-        evaluator.evaluateModel("J48", j48, data, reportPath);
+        evaluator.evaluateModel(j48, j48.specificPreprocess(data), reportPath);
 
         // Step 3: Naive Bayes Classifier
         NaiveBayesClassifier nb = new NaiveBayesClassifier();
-        evaluator.evaluateModel("Naive Bayes",nb, data, reportPath);
+        evaluator.evaluateModel(nb, data, reportPath);
 
         //Step 4: Random Forest 
         RandomForestClassifier rf = new RandomForestClassifier();
-        evaluator.evaluateModel("Random Forest",rf, data, reportPath);
+        evaluator.evaluateModel(rf, data, reportPath);
     }
 }

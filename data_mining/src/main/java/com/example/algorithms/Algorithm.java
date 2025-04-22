@@ -11,5 +11,9 @@ public interface Algorithm {
 
     Classifier getClassifier();
 
+    Instances finalizedData = null;
+
     Instances applyFeatureSelection(Instances data) throws Exception;
+
+    Instances specificPreprocess(Instances data) throws Exception;
 }

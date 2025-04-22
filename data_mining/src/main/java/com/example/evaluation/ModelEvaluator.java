@@ -27,16 +27,17 @@ public class ModelEvaluator {
         * @throws Exception If an error occurs during evaluation or file IO.
     */
 
-    public void evaluateModel(String algorithmName, Algorithm algorithm, Instances data, String reportPath) throws Exception {
+    public void evaluateModel(Algorithm algorithm, Instances data, String reportPath) throws Exception {
         long startTime = System.nanoTime();
         algorithm.train(data);
         Classifier trainedModel = algorithm.getClassifier();
-        Evaluation eval = new Evaluation(data);
-        
+        Evaluation eval = new Evaluation(data);        
         // Perform cross-validation
         eval.crossValidateModel(trainedModel, data, 10, new Random(1));
         long endTime = System.nanoTime();
         double runtime = (endTime - startTime) / 1_000_000_000.0; 
+
+        System.out.println("Accuracy: " + eval.pctCorrect() + "%");
 
         try (FileWriter writer = new FileWriter(reportPath, true)) {
             writer.write("Model: " + algorithm.getClass().getSimpleName() + "\n");
@@ -64,7 +65,7 @@ public class ModelEvaluator {
         tvp.setName("ROC Curve");
         tvp.addPlot(plotData);
         
-        JFrame frame = new JFrame("Weka ROC Curve: " + algorithmName);
+        JFrame frame = new JFrame("Weka ROC Curve: " + algorithm.getClass().getSimpleName());
         frame.setSize(600, 400);
         frame.getContentPane().add(tvp);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

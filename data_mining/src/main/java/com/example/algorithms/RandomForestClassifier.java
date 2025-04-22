@@ -11,6 +11,12 @@ public class RandomForestClassifier implements Algorithm {
     private RandomForest randomForest;
 
     @Override
+    public Instances specificPreprocess(Instances data) throws Exception {
+        // Implement specific preprocessing logic if needed
+        return data;
+    }
+
+    @Override
     public void train(Instances data) throws Exception {
         randomForest = new RandomForest();
         Instances filteredData = applyFeatureSelection(data);

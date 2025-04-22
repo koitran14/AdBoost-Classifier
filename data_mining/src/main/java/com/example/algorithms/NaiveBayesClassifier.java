@@ -6,6 +6,12 @@ import weka.core.Instances;
 
 public class NaiveBayesClassifier implements Algorithm {
     private NaiveBayes naiveBayes;
+    
+    @Override
+    public Instances specificPreprocess(Instances data) throws Exception {
+        // Implement specific preprocessing logic if needed
+        return data;
+    }
 
     @Override
     public void train(Instances data) throws Exception {

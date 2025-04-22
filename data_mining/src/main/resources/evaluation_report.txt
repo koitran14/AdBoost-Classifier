@@ -1,15 +1,15 @@
 Model: J48Classifier
-Accuracy: 56.40025990903184%
-Precision: NaN
-Recall: 0.5640025990903184
-F1-Score: NaN
-Runtime: 0.3713043 seconds
+Accuracy: 72.21719457013575%
+Precision: 0.7504058351750005
+Recall: 0.7221719457013575
+F1-Score: 0.6899261883985406
+Runtime: 2.8611979 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
-   a   b   <-- classified as
- 868   0 |   a = 0
- 671   0 |   b = 1
+    a    b   <-- classified as
+  320  548 |    a = 0
+   66 1276 |    b = 1
 
 
 Model: NaiveBayesClassifier
@@ -17,7 +17,7 @@ Accuracy: 72.05977907732294%
 Precision: 0.725107419632289
 Recall: 0.7205977907732294
 F1-Score: 0.7216094630683735
-Runtime: 0.2651074 seconds
+Runtime: 0.5224525 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
@@ -31,49 +31,7 @@ Accuracy: 74.52891487979207%
 Precision: 0.7718938660292951
 Recall: 0.7452891487979207
 F1-Score: 0.7295933017287048
-Runtime: 5.8952322 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
-   a   b   <-- classified as
- 811  57 |   a = 0
- 335 336 |   b = 1
-
-
-Model: J48Classifier
-Accuracy: 56.46523716699155%
-Precision: 0.5799988648040982
-Recall: 0.5646523716699156
-F1-Score: 0.4105527726155385
-Runtime: 0.6401282 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
-   a   b   <-- classified as
- 866   2 |   a = 0
- 668   3 |   b = 1
-
-
-Model: NaiveBayesClassifier
-Accuracy: 72.05977907732294%
-Precision: 0.725107419632289
-Recall: 0.7205977907732294
-F1-Score: 0.7216094630683735
-Runtime: 0.3938084 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
-   a   b   <-- classified as
- 621 247 |   a = 0
- 183 488 |   b = 1
-
-
-Model: RandomForestClassifier
-Accuracy: 74.52891487979207%
-Precision: 0.7718938660292951
-Recall: 0.7452891487979207
-F1-Score: 0.7295933017287048
-Runtime: 5.7380931 seconds
+Runtime: 8.3972872 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
