@@ -1,149 +1,9 @@
 Model: J48Classifier
-Accuracy: 50.0%
-Precision: 0.5208333333333333
-Recall: 0.5
-F1-Score: 0.5080213903743315
-Runtime: 0.0859883 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 5 4 | a = yes
- 3 2 | b = no
-
-
-Model: NaiveBayesClassifier
-Accuracy: 57.142857142857146%
-Precision: 0.5281385281385281
-Recall: 0.5714285714285714
-F1-Score: 0.5392857142857144
-Runtime: 0.0361553 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 7 2 | a = yes
- 4 1 | b = no
-
-
-Model: J48Classifier
-Accuracy: 50.0%
-Precision: 0.5208333333333333
-Recall: 0.5
-F1-Score: 0.5080213903743315
-Runtime: 0.0710405 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 5 4 | a = yes
- 3 2 | b = no
-
-
-Model: NaiveBayesClassifier
-Accuracy: 57.142857142857146%
-Precision: 0.5281385281385281
-Recall: 0.5714285714285714
-F1-Score: 0.5392857142857144
-Runtime: 0.0275137 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 7 2 | a = yes
- 4 1 | b = no
-
-
-Model: J48Classifier
-Accuracy: 50.0%
-Precision: 0.5208333333333333
-Recall: 0.5
-F1-Score: 0.5080213903743315
-Runtime: 0.0695552 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 5 4 | a = yes
- 3 2 | b = no
-
-
-Model: NaiveBayesClassifier
-Accuracy: 57.142857142857146%
-Precision: 0.5281385281385281
-Recall: 0.5714285714285714
-F1-Score: 0.5392857142857144
-Runtime: 0.030054 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 7 2 | a = yes
- 4 1 | b = no
-
-
-Model: J48Classifier
-Accuracy: 50.0%
-Precision: 0.5208333333333333
-Recall: 0.5
-F1-Score: 0.5080213903743315
-Runtime: 0.1759048 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 5 4 | a = yes
- 3 2 | b = no
-
-
-Model: NaiveBayesClassifier
-Accuracy: 57.142857142857146%
-Precision: 0.5281385281385281
-Recall: 0.5714285714285714
-F1-Score: 0.5392857142857144
-Runtime: 0.0439281 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 7 2 | a = yes
- 4 1 | b = no
-
-
-Model: J48Classifier
-Accuracy: 50.0%
-Precision: 0.5208333333333333
-Recall: 0.5
-F1-Score: 0.5080213903743315
-Runtime: 0.0994223 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 5 4 | a = yes
- 3 2 | b = no
-
-
-Model: NaiveBayesClassifier
-Accuracy: 57.142857142857146%
-Precision: 0.5281385281385281
-Recall: 0.5714285714285714
-F1-Score: 0.5392857142857144
-Runtime: 0.0267581 seconds
-Confusion Matrix:
-=== Confusion Matrix ===
-
- a b   <-- classified as
- 7 2 | a = yes
- 4 1 | b = no
-
-
-Model: J48Classifier
 Accuracy: 56.40025990903184%
 Precision: NaN
 Recall: 0.5640025990903184
 F1-Score: NaN
-Runtime: 0.6654455 seconds
+Runtime: 0.3713043 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
@@ -157,7 +17,7 @@ Accuracy: 72.05977907732294%
 Precision: 0.725107419632289
 Recall: 0.7205977907732294
 F1-Score: 0.7216094630683735
-Runtime: 0.281046 seconds
+Runtime: 0.2651074 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
@@ -171,7 +31,7 @@ Accuracy: 74.52891487979207%
 Precision: 0.7718938660292951
 Recall: 0.7452891487979207
 F1-Score: 0.7295933017287048
-Runtime: 5.9368662 seconds
+Runtime: 5.8952322 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
@@ -181,17 +41,17 @@ Confusion Matrix:
 
 
 Model: J48Classifier
-Accuracy: 56.40025990903184%
-Precision: NaN
-Recall: 0.5640025990903184
-F1-Score: NaN
-Runtime: 0.5947596 seconds
+Accuracy: 56.46523716699155%
+Precision: 0.5799988648040982
+Recall: 0.5646523716699156
+F1-Score: 0.4105527726155385
+Runtime: 0.6401282 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
    a   b   <-- classified as
- 868   0 |   a = 0
- 671   0 |   b = 1
+ 866   2 |   a = 0
+ 668   3 |   b = 1
 
 
 Model: NaiveBayesClassifier
@@ -199,7 +59,7 @@ Accuracy: 72.05977907732294%
 Precision: 0.725107419632289
 Recall: 0.7205977907732294
 F1-Score: 0.7216094630683735
-Runtime: 0.2681414 seconds
+Runtime: 0.3938084 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 
@@ -213,7 +73,7 @@ Accuracy: 74.52891487979207%
 Precision: 0.7718938660292951
 Recall: 0.7452891487979207
 F1-Score: 0.7295933017287048
-Runtime: 5.7941763 seconds
+Runtime: 5.7380931 seconds
 Confusion Matrix:
 === Confusion Matrix ===
 

@@ -6,14 +6,21 @@ import weka.classifiers.trees.J48;
 import weka.core.Instances;
 import weka.filters.Filter;
 import weka.filters.supervised.attribute.AttributeSelection;
+import weka.filters.supervised.attribute.Discretize;
 
 public class J48Classifier implements Algorithm {
     private J48 tree;
 
     @Override
     public void train (Instances data) throws Exception {
+        Discretize discretize = new Discretize();
+        discretize.setUseBetterEncoding(true); // Optimize binning
+        discretize.setInputFormat(data);
+        Instances discretizedData = Filter.useFilter(data, discretize);
+        Instances filteredData = applyFeatureSelection(discretizedData); 
+
         tree = new J48(); 
-        Instances filteredData = applyFeatureSelection(data);
+        tree.setOptions(new String[]{"-C", "0.1", "-M", "5"}); // Tuned parameters
         tree.buildClassifier(filteredData); 
     }
     
@@ -32,11 +39,12 @@ public class J48Classifier implements Algorithm {
         AttributeSelection filter = new AttributeSelection();
         CfsSubsetEval eval = new CfsSubsetEval();
         BestFirst search = new BestFirst();
+        search.setOptions(new String[]{"-D", "1", "-N", "5"}); // Forward search, max 5 features
 
         filter.setEvaluator(eval);
         filter.setSearch(search);
         filter.setInputFormat(data);
         
-        return Filter.useFilter(data, filter);
+        return Filter.useFilter(data, filter); // Filter.useFilter(data, filter); // Apply the filter to the data
     }
 }
