@@ -4,13 +4,13 @@ import javax.swing.JFrame;
 
 import com.example.controllers.MiningController;
 
-public class MainFrame extends JFrame {    
+public class MainFrame extends JFrame {
     public static void main(String[] args) throws Exception {
         MiningController controller = new MiningController();
         controller.runPipeline(
-            "D:\\Project\\Data-Mining-Proj\\data_mining\\src\\main\\resources\\data.arff",
-            "D:\\Project\\Data-Mining-Proj\\data_mining\\src\\main\\resources\\cleaned_dataset.arff",
-            "D:\\Project\\Data-Mining-Proj\\data_mining\\src\\main\\resources\\evaluation_report.txt"
+            "data.arff",                  
+            "cleaned_dataset.arff",        
+            "evaluation_report.txt"       
         );
     }
 }

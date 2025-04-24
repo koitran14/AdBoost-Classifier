@@ -36,7 +36,7 @@ public class J48Classifier implements Algorithm {
 
     @Override
     public void train(Instances data) throws Exception {
-        optimizeJ48(data);
+        // optimizeJ48(data);
         tree = new J48();
         tree.setOptions(new String[]{"-C", "0.9", "-M", "20", "-S"});
         tree.buildClassifier(data);
