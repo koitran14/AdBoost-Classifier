@@ -1,6 +1,10 @@
 package com.example.algorithms;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Random;
+
+import com.example.utils.Helpers;
 
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
@@ -47,7 +51,11 @@ public class J48Classifier implements Algorithm {
         Instances discretizedData = Filter.useFilter(balancedData, discretize);
 
         // Step 7: Apply feature selection
-        Instances filteredFinalData = applyFeatureSelection(discretizedData);        
+        Instances filteredFinalData = applyFeatureSelection(discretizedData);  
+
+        Helpers helper = new Helpers(); 
+        helper.exportToCSV(filteredFinalData, "j48_filtered_dataset.csv");  
+        
         tree = new J48();
         tree.setOptions(new String[]{"-U", "-M", "5"});
         tree.buildClassifier(filteredFinalData);
@@ -69,13 +77,13 @@ public class J48Classifier implements Algorithm {
         CfsSubsetEval eval = new CfsSubsetEval();
         BestFirst search = new BestFirst();
         search.setOptions(new String[]{"-D", "1", "-N", "10"}); // Max 10 features
-
+    
         filter.setEvaluator(eval);
         filter.setSearch(search);
         filter.setInputFormat(data);
+            
         return Filter.useFilter(data, filter);
-    } 
-
+    }
 
     private void optimizeJ48(Instances data) throws Exception {
         String[][] paramGrid = {

@@ -1,11 +1,13 @@
 package com.example.evaluation;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.util.Random;
 
 import javax.swing.JFrame;
 
 import com.example.algorithms.Algorithm;
+import com.example.utils.Helpers;
 
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
@@ -27,7 +29,7 @@ public class ModelEvaluator {
         * @throws Exception If an error occurs during evaluation or file IO.
     */
 
-    public void evaluateModel(Algorithm algorithm, Instances data, String reportPath) throws Exception {
+    public void evaluateModel(Algorithm algorithm, Instances data, String reportName) throws Exception {
         long startTime = System.nanoTime();
         algorithm.train(data);
         Classifier trainedModel = algorithm.getClassifier();
@@ -39,7 +41,12 @@ public class ModelEvaluator {
 
         System.out.println("Accuracy: " + eval.pctCorrect() + "%");
 
-        try (FileWriter writer = new FileWriter(reportPath, true)) {
+        Helpers helpers = new Helpers();
+        String outputPath = helpers.getOutputPath();
+
+        String absFileName = new File(outputPath, reportName).getPath();
+        
+        try (FileWriter writer = new FileWriter(absFileName, true)) {
             writer.write("Model: " + algorithm.getClass().getSimpleName() + "\n");
             writer.write("Accuracy: " + eval.pctCorrect() + "%\n");
             writer.write("Precision: " + eval.weightedPrecision() + "\n");

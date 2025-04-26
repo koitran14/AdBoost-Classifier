@@ -1,5 +1,7 @@
 package com.example.algorithms;
 
+import com.example.utils.Helpers;
+
 import weka.attributeSelection.AttributeSelection;
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
@@ -20,6 +22,8 @@ public class RandomForestClassifier implements Algorithm {
     public void train(Instances data) throws Exception {
         randomForest = new RandomForest();
         Instances filteredData = applyFeatureSelection(data);
+        Helpers helper = new Helpers(); 
+        helper.exportToCSV(filteredData, "RandomForest_filtered_dataset.csv"); 
         randomForest.buildClassifier(filteredData);
     }
 

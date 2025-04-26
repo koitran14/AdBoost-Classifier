@@ -1,5 +1,7 @@
 package com.example.algorithms;
 
+import com.example.utils.Helpers;
+
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
 import weka.classifiers.Classifier;
@@ -7,8 +9,10 @@ import weka.classifiers.bayes.NaiveBayes;
 import weka.core.Instances;
 import weka.filters.Filter;
 import weka.filters.supervised.attribute.AttributeSelection;
+import weka.filters.supervised.attribute.Discretize;
 import weka.filters.supervised.instance.SMOTE;
 import weka.filters.unsupervised.attribute.StringToWordVector;
+
 
 public class NaiveBayesClassifier implements Algorithm {
     private NaiveBayes naiveBayes;
@@ -25,12 +29,28 @@ public class NaiveBayesClassifier implements Algorithm {
         Instances discretizedData = Filter.useFilter(balancedData, discretize);
 
         Instances filteredData = applyFeatureSelection(discretizedData);
+    
         return filteredData;
     }
 
     @Override
-    public void train(Instances filteredData) throws Exception {
+    public void train(Instances data) throws Exception {
         naiveBayes = new NaiveBayes();
+
+        Instances processedData = applyTextProcessing(data);
+
+        Instances balancedData = applySMOTE(processedData);
+
+        Discretize discretize = new Discretize();
+        discretize.setUseBetterEncoding(true); // Optimize binning
+        discretize.setInputFormat(balancedData);
+        Instances discretizedData = Filter.useFilter(balancedData, discretize);
+
+        Instances filteredData = applyFeatureSelection(discretizedData);
+
+        Helpers helper = new Helpers(); 
+        helper.exportToCSV(data, "naiveBayes_filtered_dataset.csv"); 
+        
         naiveBayes.buildClassifier(filteredData);
     }
 
