@@ -2,6 +2,7 @@ package com.example.data;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 import weka.core.Instances;
 import weka.core.converters.ArffLoader;
@@ -12,17 +13,18 @@ import weka.filters.unsupervised.attribute.NumericToNominal;
 
 
 public class DataLoader {
-    public Instances loadDataset(String filePath) throws Exception {
-        ArffLoader loader = new ArffLoader();
-        File datasetFile = new File(filePath);
-        if (!datasetFile.exists()) {
-            throw new FileNotFoundException("Dataset file not found: " + filePath);
+    public Instances loadDataset(String resourceName) throws Exception {
+        InputStream inputStream = getClass().getClassLoader().getResourceAsStream(resourceName);
+        if (inputStream == null) {
+            throw new FileNotFoundException("Dataset file not found in resources: " + resourceName);
         }
-        loader.setFile(new File(filePath));
-        Instances data = loader.getDataSet();
         
+        ArffLoader loader = new ArffLoader();
+        loader.setSource(inputStream);
+        Instances data = loader.getDataSet();
+
         int idx = data.attribute("uses_ad_boosts").index();
-        data.setClassIndex(idx); 
+        data.setClassIndex(idx);
 
         if (data.classAttribute().isNumeric()) {
             NumericToNominal filter = new NumericToNominal();
@@ -30,6 +32,7 @@ public class DataLoader {
             filter.setAttributeIndices("" + (data.classIndex() + 1));
             data = Filter.useFilter(data, filter);
         }
+
         return data;
     }
 

@@ -1,0 +1,10 @@
+com\example\controllers\MiningController.class
+com\example\algorithms\J48Classifier.class
+com\example\algorithms\NaiveBayesClassifier.class
+com\example\evaluation\ModelEvaluator.class
+com\example\data\DataAnalyzer.class
+com\example\data\DataLoader.class
+com\example\algorithms\Algorithm.class
+com\example\algorithms\RandomForestClassifier.class
+com\example\data\DataCleaner.class
+com\example\gui\MainFrame.class
