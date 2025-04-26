@@ -40,3 +40,213 @@ Confusion Matrix:
  335 336 |   b = 1
 
 
+Model: J48Classifier
+Accuracy: 58.47953216374269%
+Precision: 0.5741502258953194
+Recall: 0.5847953216374269
+F1-Score: 0.5606025104447833
+Runtime: 5.6051966 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 683 185 |   a = 0
+ 454 217 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.490086 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 11.875487901 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 58.47953216374269%
+Precision: 0.5741502258953194
+Recall: 0.5847953216374269
+F1-Score: 0.5606025104447833
+Runtime: 5.3337542 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 683 185 |   a = 0
+ 454 217 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.4523264 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 9.5080661 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.66666666666667%
+Precision: 0.7324614607025525
+Recall: 0.6666666666666666
+F1-Score: 0.6166742874561805
+Runtime: 4.7056326 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 837  31 |   a = 0
+ 482 189 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.4283748 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 9.902373499 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.66666666666667%
+Precision: 0.7324614607025525
+Recall: 0.6666666666666666
+F1-Score: 0.6166742874561805
+Runtime: 7.975875599 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 837  31 |   a = 0
+ 482 189 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.405743899 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 9.564994101 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 7.079508099 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.452505001 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.52891487979207%
+Precision: 0.7718938660292951
+Recall: 0.7452891487979207
+F1-Score: 0.7295933017287048
+Runtime: 9.5216788 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 811  57 |   a = 0
+ 335 336 |   b = 1
+
+

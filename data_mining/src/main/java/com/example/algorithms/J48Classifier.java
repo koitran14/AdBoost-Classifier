@@ -37,9 +37,20 @@ public class J48Classifier implements Algorithm {
     @Override
     public void train(Instances data) throws Exception {
         optimizeJ48(data);
+        Instances processedData = applyTextProcessing(data);
+
+        Instances balancedData = applySMOTE(processedData);
+
+        Discretize discretize = new Discretize();
+        discretize.setUseBetterEncoding(true);
+        discretize.setInputFormat(balancedData);
+        Instances discretizedData = Filter.useFilter(balancedData, discretize);
+
+        // Step 7: Apply feature selection
+        Instances filteredFinalData = applyFeatureSelection(discretizedData);        
         tree = new J48();
-        tree.setOptions(new String[]{"-C", "0.9", "-M", "20", "-S"});
-        tree.buildClassifier(data);
+        tree.setOptions(new String[]{"-U", "-M", "5"});
+        tree.buildClassifier(filteredFinalData);
     }
 
     @Override
@@ -68,12 +79,12 @@ public class J48Classifier implements Algorithm {
 
     private void optimizeJ48(Instances data) throws Exception {
         String[][] paramGrid = {
-            // {"-C", "0.3", "-M", "5", "-S"},
-            // {"-C", "0.5", "-M", "10", "-S"}, // 66.66666666666667%
-            // {"-C", "0.7", "-M", "15", "-S"},
+            {"-C", "0.3", "-M", "5", "-S"},
+            {"-C", "0.5", "-M", "10", "-S"}, // 66.66666666666667%
+            {"-C", "0.7", "-M", "15", "-S"},
             {"-C", "0.9", "-M", "20", "-S"}, // 66.66666666666667%
-            // {"-U", "-M", "5"}, // 66.92657569850552%
-            // {"-R", "-N", "3", "-M", "10"} // 66.92657569850552%
+            {"-U", "-M", "5"}, // 66.92657569850552%
+            {"-R", "-N", "3", "-M", "10"} // 66.92657569850552%
         };
     
         bestF1Score = 0.0;
@@ -137,7 +148,7 @@ public class J48Classifier implements Algorithm {
 
         SMOTE smote = new SMOTE();
         smote.setInputFormat(data);
-        smote.setPercentage(100);
+        smote.setPercentage(200);
         return Filter.useFilter(data, smote);
     }
 }
