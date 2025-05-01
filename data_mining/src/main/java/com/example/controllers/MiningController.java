@@ -1,6 +1,7 @@
 package com.example.controllers;
 
 import com.example.algorithms.J48Classifier;
+import com.example.algorithms.LogisticRegressionClassifier;
 import com.example.algorithms.NaiveBayesClassifier;
 import com.example.algorithms.RandomForestClassifier;
 import com.example.data.DataAnalyzer;
@@ -26,6 +27,10 @@ public class MiningController {
         // Step 2: J48 Classifier
         J48Classifier j48 = new J48Classifier();
         evaluator.evaluateModel(j48, data, reportPath);
+
+        // Step: Logistic Regression Classifier
+        // LogisticRegressionClassifier logistic = new LogisticRegressionClassifier();
+        // evaluator.evaluateModel(logistic, logistic.specificPreprocess(data), reportPath);
 
         // Step 3: Naive Bayes Classifier
         NaiveBayesClassifier nb = new NaiveBayesClassifier();

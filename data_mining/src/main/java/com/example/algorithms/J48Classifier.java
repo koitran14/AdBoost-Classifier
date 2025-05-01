@@ -1,7 +1,5 @@
 package com.example.algorithms;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.Random;
 
 import com.example.utils.Helpers;
@@ -156,7 +154,7 @@ public class J48Classifier implements Algorithm {
 
         SMOTE smote = new SMOTE();
         smote.setInputFormat(data);
-        smote.setPercentage(200);
+        smote.setPercentage(100);
         return Filter.useFilter(data, smote);
     }
 }

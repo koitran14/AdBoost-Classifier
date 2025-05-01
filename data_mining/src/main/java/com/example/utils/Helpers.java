@@ -9,7 +9,15 @@ public class Helpers {
     public void exportToCSV(Instances instances, String fileName) throws Exception {
         try {
             String outputPath = getOutputPath();
-            String absFileName = new File(outputPath, fileName).getPath();
+            File outputFile = new File(outputPath, fileName);
+            String absFileName = outputFile.getPath();
+
+            if (outputFile.exists()) {
+                if (!outputFile.delete()) {
+                    throw new Exception("Failed to delete existing file: " + absFileName);
+                }
+            }
+            
             CSVSaver saver = new CSVSaver();
             saver.setInstances(instances);
             saver.setFile(new File(absFileName));

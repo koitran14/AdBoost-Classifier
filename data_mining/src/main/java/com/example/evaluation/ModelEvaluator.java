@@ -30,11 +30,12 @@ public class ModelEvaluator {
     */
 
     public void evaluateModel(Algorithm algorithm, Instances data, String reportName) throws Exception {
+        System.out.println("\n\n=====" + algorithm.getClass().getSimpleName()+"======");
+        
         long startTime = System.nanoTime();
         algorithm.train(data);
         Classifier trainedModel = algorithm.getClassifier();
         Evaluation eval = new Evaluation(data);        
-        // Perform cross-validation
         eval.crossValidateModel(trainedModel, data, 10, new Random(1));
         long endTime = System.nanoTime();
         double runtime = (endTime - startTime) / 1_000_000_000.0; 
