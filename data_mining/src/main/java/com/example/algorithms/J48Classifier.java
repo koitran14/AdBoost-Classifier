@@ -2,8 +2,6 @@ package com.example.algorithms;
 
 import java.util.Random;
 
-import com.example.utils.Helpers;
-
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
 import weka.classifiers.Evaluation;
@@ -50,9 +48,6 @@ public class J48Classifier implements Algorithm {
 
         // Step 7: Apply feature selection
         Instances filteredFinalData = applyFeatureSelection(discretizedData);  
-
-        Helpers helper = new Helpers(); 
-        helper.exportToCSV(filteredFinalData, "j48_filtered_dataset.csv");  
         
         tree = new J48();
         tree.setOptions(new String[]{"-U", "-M", "5"});
@@ -116,12 +111,6 @@ public class J48Classifier implements Algorithm {
                 continue;
             }
         }
-    
-        // if (bestOptions == null || bestF1Score == 0.0) {
-        //     // System.err.println("Warning: No valid options found; using default J48 options");
-        //     bestOptions = new String[]{"-C", "0.25", "-M", "2"};
-        //     bestF1Score = 0.0;
-        // }
         System.out.println("Best Options: " + String.join(" ", bestOptions) + " | Best Accuracy: " + bestF1Score);
     }
 
@@ -157,4 +146,7 @@ public class J48Classifier implements Algorithm {
         smote.setPercentage(100);
         return Filter.useFilter(data, smote);
     }
+
+
+
 }
