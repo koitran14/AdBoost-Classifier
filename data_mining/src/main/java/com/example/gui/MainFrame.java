@@ -8,7 +8,7 @@ public class MainFrame extends JFrame {
     public static void main(String[] args) throws Exception {
         MiningController controller = new MiningController();
         controller.runPipeline(
-            "data.arff",                  
+            "data1.arff",                  
             "cleaned_dataset.arff",        
             "evaluation_report.txt"       
         );

@@ -40,3 +40,17 @@ Confusion Matrix:
  335 336 |   b = 1
 
 
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.813671375 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+

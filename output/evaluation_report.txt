@@ -320,3 +320,185 @@ Confusion Matrix:
  335 336 |   b = 1
 
 
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.11832775 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.4060085 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 71.47498375568551%
+Precision: 0.7286932625261254
+Recall: 0.7147498375568551
+F1-Score: 0.7157020441881862
+Runtime: 1.07491525 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 578 290 |   a = 0
+ 149 522 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 75.04873294346979%
+Precision: 0.7801479995567441
+Recall: 0.7504873294346979
+F1-Score: 0.7345388609766027
+Runtime: 3.956118625 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 818  50 |   a = 0
+ 334 337 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.033381375 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.44964262508122%
+Precision: 0.730592773742057
+Recall: 0.7244964262508122
+F1-Score: 0.7255914994663505
+Runtime: 0.87163175 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 616 252 |   a = 0
+ 172 499 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.91877842755035%
+Precision: 0.7785318056961716
+Recall: 0.7491877842755036
+F1-Score: 0.7331562508775226
+Runtime: 3.458113458 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 817  51 |   a = 0
+ 335 336 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.139927125 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 72.05977907732294%
+Precision: 0.725107419632289
+Recall: 0.7205977907732294
+F1-Score: 0.7216094630683735
+Runtime: 0.933404583 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 621 247 |   a = 0
+ 183 488 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 74.91877842755035%
+Precision: 0.7791612994872442
+Recall: 0.7491877842755036
+F1-Score: 0.7329615859721106
+Runtime: 6.789478417 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 818  50 |   a = 0
+ 336 335 |   b = 1
+
+
+Model: J48Classifier
+Accuracy: 66.92657569850552%
+Precision: 0.7428751458722396
+Recall: 0.6692657569850552
+F1-Score: 0.6178850046271679
+Runtime: 2.112437041 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 843  25 |   a = 0
+ 484 187 |   b = 1
+
+
+Model: NaiveBayesClassifier
+Accuracy: 71.47498375568551%
+Precision: 0.7286932625261254
+Recall: 0.7147498375568551
+F1-Score: 0.7157020441881862
+Runtime: 0.993665958 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 578 290 |   a = 0
+ 149 522 |   b = 1
+
+
+Model: RandomForestClassifier
+Accuracy: 75.04873294346979%
+Precision: 0.7801479995567441
+Recall: 0.7504873294346979
+F1-Score: 0.7345388609766027
+Runtime: 3.336593917 seconds
+Confusion Matrix:
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 818  50 |   a = 0
+ 334 337 |   b = 1
+
+
