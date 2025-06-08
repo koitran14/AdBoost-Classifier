@@ -1,3 +1,5 @@
+<div align="center">
+  
 # 📈 E-Commerce Ad Boost Classifier
 A modular Java + Weka project comparing classification models to predict advertisement boost usage in e-commerce listings
 
@@ -6,7 +8,11 @@ A modular Java + Weka project comparing classification models to predict adverti
 ![GitHub stars](https://img.shields.io/github/stars/koitran14/AdBoost-Classifier?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/koitran14/AdBoost-Classifier?style=social)
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/AdBoost-Classifier)
+
+</div>
 ---
+
+
 
 ## 👥 Contributors
 
