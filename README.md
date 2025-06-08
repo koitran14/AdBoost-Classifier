@@ -10,7 +10,6 @@ A modular Java + Weka project comparing classification models to predict adverti
 ![GitHub issues](https://img.shields.io/github/issues/koitran14/AdBoost-Classifier)
 
 </div>
----
 
 
 
