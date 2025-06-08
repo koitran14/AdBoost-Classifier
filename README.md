@@ -1,7 +1,11 @@
 # 📈 E-Commerce Ad Boost Classifier
-
 A modular Java + Weka project comparing classification models to predict advertisement boost usage in e-commerce listings.
 
+ ![GitHub repo size](https://img.shields.io/github/repo-size/koitran14/The-Treasure-Hunt-Project)
+![GitHub contributors](https://img.shields.io/github/contributors/koitran14/The-Treasure-Hunt-Project)
+![GitHub stars](https://img.shields.io/github/stars/koitran14/The-Treasure-Hunt-Project?style=social)
+![GitHub forks](https://img.shields.io/github/forks/koitran14/The-Treasure-Hunt-Project?style=social)
+![GitHub issues](https://img.shields.io/github/issues/koitran14/The-Treasure-Hunt-Project)
 ---
 
 ## 👥 Contributors
