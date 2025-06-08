@@ -1,11 +1,11 @@
 # 📈 E-Commerce Ad Boost Classifier
 A modular Java + Weka project comparing classification models to predict advertisement boost usage in e-commerce listings.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/koitran14/Data-Mining-Proj)
-![GitHub contributors](https://img.shields.io/github/contributors/koitran14/Data-Mining-Proj)
-![GitHub stars](https://img.shields.io/github/stars/koitran14/Data-Mining-Proj?style=social)
-![GitHub forks](https://img.shields.io/github/forks/koitran14/Data-Mining-Proj?style=social)
-![GitHub issues](https://img.shields.io/github/issues/koitran14/Data-Mining-Proj)
+![GitHub repo size](https://img.shields.io/github/repo-size/koitran14/AdBoost-Classifier)
+![GitHub contributors](https://img.shields.io/github/contributors/koitran14/AdBoost-Classifier)
+![GitHub stars](https://img.shields.io/github/stars/koitran14/AdBoost-Classifier?style=social)
+![GitHub forks](https://img.shields.io/github/forks/koitran14/AdBoost-Classifier?style=social)
+![GitHub issues](https://img.shields.io/github/issues/koitran14/AdBoost-Classifier)
 ---
 
 ## 👥 Contributors
