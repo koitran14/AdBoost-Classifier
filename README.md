@@ -1,124 +1,90 @@
-# 📊 Data-Mining-Proj
+# 📈 E-Commerce Ad Boost Classifier
 
-A Java-based data mining application powered by **Weka** and **Maven**, with an optional Swing-based GUI — designed and built in **Visual Studio Code**.
-
----
-
-## 📚 Table of Content
-
-- [🧰 Prerequisites](#-prerequisites)
-- [⚙️ Project Setup](#️-project-setup)
-- [🚀 Running the Project](#-running-the-project)
-- [🛠️ Troubleshooting](#️-troubleshooting)
-- [📂 Project Structure](#-project-structure)
-- [📦 Project Structure Overview](#-project-structure-overview)
-- [✅ You're All Set!](#-youre-all-set)
+A modular Java + Weka project comparing classification models to predict advertisement boost usage in e-commerce listings.
 
 ---
 
-## 🧰 Prerequisites
+## 👥 Contributors
 
-Make sure the following tools and extensions are installed on your system:
-
-- **Java JDK 8+**  
-  ```bash
-  java -version
-  ```
-
-- **Apache Maven**  
-  ```bash
-  mvn --version
-  ```
-
-- **Visual Studio Code Extensions**  
-  - [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-  - [Maven for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven)
+| Name                    | Role         |
+| ----------------------- | ------------ |
+| **Trần Ngọc Đăng Khôi** | Project Lead |
+| Huỳnh Lâm Đăng Khoa     | Team Member  |
+| Nguyễn Xuân Trâm Anh    | Team Member  |
 
 ---
 
-## ⚙️ Project Setup
+## 🧠 Overview
 
-1. **Open the project folder** in VS Code.
+> Predict whether a product uses ad boosts based on features like price, ratings, and product text using 3 classic machine learning models.
 
-2. **Verify Weka dependency** in `pom.xml`:
-   ```xml
-   <dependency>
-     <groupId>nz.ac.waikato.cms.weka</groupId>
-     <artifactId>weka-stable</artifactId>
-     <version>3.8.6</version>
-   </dependency>
-   ```
-
-3. **Install dependencies** by running:
-   ```bash
-   mvn clean install
-   ```
+* **Language**: Java
+* **Library**: Weka
+* **Dataset**: 1,573 product listings, 43 attributes
+* **Target Feature**: `uses_ad_boosts`
 
 ---
 
-## 🚀 Running the Project
+## ⚙️ Features
 
-1. **Save the project**  
-   Press `Ctrl + S` in VS Code — this triggers auto-build and downloads all required dependencies (with Java + Maven extensions installed).
-
-2. **Run the application**  
-   Right-click on your main class (e.g., `MainFrame.java`) in the **Project Explorer** and select:
-
-   ```
-   Run Java
-   ```
-
-   > 🔁 Replace `MainFrame.java` with your actual entry class if different.
+* 🔧 Preprocessing: missing value imputation, outlier handling, duplicates removal
+* ⚖️ SMOTE: for balancing the imbalanced class
+* 🔤 Text Vectorization: StringToWordVector with TF-IDF & n-grams
+* 🧪 Feature Selection: CfsSubsetEval, WrapperSubsetEval
+* 🤖 Models: J48, Naive Bayes, Random Forest
 
 ---
 
-## 🛠️ Troubleshooting
+## 🧪 Model Performance
 
-- **JAVA_HOME Not Set?**  
-  Make sure the `JAVA_HOME` environment variable points to your JDK installation.
+| Model                | Accuracy   | F1-Score  |
+| -------------------- | ---------- | --------- |
+| 🌳 Random Forest     | **75.11%** | **0.735** |
+| 📙 Naive Bayes       | 72.06%     | 0.721     |
+| 🌲 J48 Decision Tree | 66.93%     | 0.618     |
 
-- **Dependency issues?**  
-  Use the command:
-  ```bash
-  mvn dependency:tree
-  ```
+> 🏆 **Random Forest** performed the best in overall accuracy and F1-score.
 
 ---
 
-## 📂 Project Structure
+## 🚀 How to Run
 
+1. **Clone the Repository**
+
+```bash
+git clone https://github.com/koitran14/Data-Mining-Proj.git
+cd Data-Mining-Proj
 ```
-project-root/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/
-│   │   │       ├── data/            # Data handling module
-│   │   │       ├── algorithms/      # Algorithm modules
-│   │   │       ├── controller/      # Controls flow
-│   │   │       ├── gui/             # GUI (optional)
-│   │   │       └── utils/           # Helpers
-│   │   │       └── evaluation/      # Evaluation
-│   │   └── resources/               # Static data (dataset csv, arff...)
-│   └── test/
-│       └── java/com/example/tests/  # JUnit Tests
-│
-├── pom.xml
-└── README.md
+
+2. **Set Up Java and Weka**
+
+* Java JDK 8 or higher
+* Download [Weka 3.8+](https://www.cs.waikato.ac.nz/ml/weka/)
+
+3. **Compile and Run**
+
+```bash
+javac -cp weka.jar src/**/*.java
+java -cp .:weka.jar Main
 ```
 
 ---
 
-## 📦 Project Structure Overview
+## 🗂️ Project Structure
 
-| **Module**            | **Folder**     | **Purpose**                                                                 | **Key Classes/Files**                                  | **Notes**                                                                 |
-|-----------------------|----------------|------------------------------------------------------------------------------|--------------------------------------------------------|---------------------------------------------------------------------------
-| **Data Handling**     | `data/`         | Load and manage datasets                                                    | `DataLoader.java`                                      | Loads datasets (e.g., ARFF), stores as Weka `Instances`. Included: loadDataset (for ARFF) and loadCSVDataset (include ARFF converter)                 |
-| **Algorithms**        | `algorithms/`   | Encapsulate individual algorithms                                           | `Algorithm.java`, `J48Classifier.java`, `NaiveBayes.java` | Implements common interface for flexibility                               |
-| **Controller**        | `controller/`   | Manage data and algorithm flow                                              | `AnalysisController.java`                              | Handles data loading and algorithm execution  -> Remember to **add new classifiers** if its evaluation required                            |
-| **GUI (Optional)**    | `gui/`          | User interface for dataset and algorithm interaction                        | `MainFrame.java`                                       |Call directly to mining controller to handle various datasets   |
-| **Utilities**         | `utils/`        | Reusable helper functions and tools                                         | Logging, validation utilities                          | Shared logic across modules                                               |
-| **Testing**           | `tests/`        | Validate functionality and correctness                                     | `AlgorithmTests.java`, integration tests               | Use **JUnit** or **TestNG** for testing                                   |
-| **Evaluation**           | `evaluation/`        | evaluate selected classifier with given dataset and visualize its result.                                    | `ModelEvaluator.java`              | including Accuracy, F1-score, Recall,...                             |
+```
+Data-Mining-Proj/
+├── classifiers/           # J48, NaiveBayes, RandomForest classes
+├── preprocessing/         # Text filters, SMOTE, discretizers
+├── evaluation/            # Evaluation & ROC metrics
+└── Main.java              # Program entry point
+```
+
 ---
+
+## 🚧 Future Improvements
+
+* 🧬 Ensemble models or hybrid pipelines
+* 🗣️ Improve text encoding with embeddings
+* 🔍 Add interpretability tools (e.g., SHAP, LIME)
+
